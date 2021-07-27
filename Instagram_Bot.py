@@ -49,18 +49,18 @@ print(pseudo)
 driver.get("https://www.instagram.com/")
 time.sleep(10)
 driver.find_elements_by_xpath("/html/body/div[3]/div/div/button[1]").click()time.sleep(10)
-A1 = driver.find_elements_by_name("username")[0].send_keys('yoschigamer57@gmail.com')
-A1 = driver.find_elements_by_name("password")[0].send_keys('kiki57660')
+A1 = driver.find_elements_by_name("username").send_keys('yoschigamer57@gmail.com')
+A1 = driver.find_elements_by_name("password").send_keys('kiki57660')
 
-A1 = driver.find_elements_by_xpath('//*[@id="loginForm"]/div/div[3]/button/div')[0].click()
+A1 = driver.find_elements_by_xpath('//*[@id="loginForm"]/div/div[3]/button/div').click()
 time.sleep(10)
-A1 = driver.find_elements_by_xpath('/html/body/div[4]/div/div/div/div[3]/button[2]')[0].click()
+A1 = driver.find_elements_by_xpath('/html/body/div[4]/div/div/div/div[3]/button[2]').click()
 time.sleep(10)
 
 driver.get('https://www.instagram.com/accounts/edit/')
 
-A1 = driver.find_elements_by_class_name("p7vTm")[0].clear()
+A1 = driver.find_elements_by_class_name("p7vTm").clear()
 
-A1 = driver.find_elements_by_class_name("p7vTm")[0].send_keys(f'(we are the 20 {string_date} ) <> {philosophie[randomnumberphilo]}')
+A1 = driver.find_elements_by_class_name("p7vTm").send_keys(f'(we are the 20 {string_date} ) <> {philosophie[randomnumberphilo]}')
 
 A1 = driver.find_elements_by_xpath('//*[@id="react-root"]/section/main/div/article/form/div[11]/div/div/button')[0].click()
