@@ -36,39 +36,32 @@ philosophie = ("La philosophie est le microscope de la pensée. éd. J. Hetzel e
                    "Ma philosophie c'est : le présent n'existe pas. Seul le futur passe Les petits ruisseaux - Pascal Rabaté",
                    "La vraie philosophie est de voir les choses telles qu'elles sont. Oeuvres complètes de buffon: l'homme (édition 1818) - Georges-Louis Leclerc de Buffon")
 
+randomnumberphilo = random.randint(0, 31)
+print(philosophie[randomnumberphilo])
 
-for i in range(1000000000000000000000000000000000000000*10000000000000000000000000000000000000000000000000000000000000000000000000000000000000):
-    temps = time.localtime()
-    if temps[3] == 24 and temps[4] == 0 and temps[5] == 0:
+DATE = dt.datetime.now()
+string_date = DATE.strftime("%A, %d %B, %y")
+driver = webdriver.Chrome(executable_path="moteur/chromedriver.exe")
 
-        randomnumberphilo = random.randint(0, 31)
-        print(philosophie[randomnumberphilo])
+pseudo = random.randrange(0, 101, 2)
+print(pseudo)
 
-        DATE = dt.datetime.now()
-        string_date = DATE.strftime("%A, %d %B, %y")
-        driver = webdriver.Chrome(executable_path="moteur/chromedriver.exe")
+driver.get("https://www.instagram.com/")
+time.sleep(10)
+A1 = driver.find_elements_by_xpath("/html/body/div[3]/div/div/button[1]")[0].click()
+time.sleep(10)
+A1 = driver.find_elements_by_name("username")[0].send_keys('yoschigamer57@gmail.com')
+A1 = driver.find_elements_by_name("password")[0].send_keys('kiki57660')
 
-        pseudo = random.randrange(0, 101, 2)
-        print(pseudo)
+A1 = driver.find_elements_by_xpath('//*[@id="loginForm"]/div/div[3]/button/div')[0].click()
+time.sleep(10)
+A1 = driver.find_elements_by_xpath('/html/body/div[4]/div/div/div/div[3]/button[2]')[0].click()
+time.sleep(10)
 
+driver.get('https://www.instagram.com/accounts/edit/')
 
+A1 = driver.find_elements_by_class_name("p7vTm")[0].clear()
 
-        driver.get("https://www.instagram.com/")
-        time.sleep(2)
-        A1 = driver.find_elements_by_xpath("/html/body/div[3]/div/div/button[1]")[0].click()
-        time.sleep(1)
-        A1 = driver.find_elements_by_name("username")[0].send_keys('yoschigamer57@gmail.com')
-        A1 = driver.find_elements_by_name("password")[0].send_keys('kiki57660')
+A1 = driver.find_elements_by_class_name("p7vTm")[0].send_keys(f'(we are the 20 {string_date} ) <> {philosophie[randomnumberphilo]}')
 
-        A1 = driver.find_elements_by_xpath('//*[@id="loginForm"]/div/div[3]/button/div')[0].click()
-        time.sleep(5)
-        A1 = driver.find_elements_by_xpath('/html/body/div[4]/div/div/div/div[3]/button[2]')[0].click()
-        time.sleep(5)
-
-        driver.get('https://www.instagram.com/accounts/edit/')
-
-        A1 = driver.find_elements_by_class_name("p7vTm")[0].clear()
-
-        A1 = driver.find_elements_by_class_name("p7vTm")[0].send_keys(f'(we are the 20 {string_date} ) <> {philosophie[randomnumberphilo]}')
-
-        A1 = driver.find_elements_by_xpath('//*[@id="react-root"]/section/main/div/article/form/div[11]/div/div/button')[0].click()
+A1 = driver.find_elements_by_xpath('//*[@id="react-root"]/section/main/div/article/form/div[11]/div/div/button')[0].click()
