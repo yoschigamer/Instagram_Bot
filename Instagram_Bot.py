@@ -41,7 +41,7 @@ print(philosophie[randomnumberphilo])
 
 DATE = dt.datetime.now()
 string_date = DATE.strftime("%A, %d %B, %y")
-driver = webdriver.Chrome(executable_path="moteur/chromedriver.exe")
+driver = webdriver.Chrome(executable_path=/app/.chromedriver/bin/chromedriver")
 
 pseudo = random.randrange(0, 101, 2)
 print(pseudo)
