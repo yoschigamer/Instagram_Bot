@@ -51,7 +51,7 @@ time.sleep(10)
 driver.find_elements_by_xpath("/html/body/div[3]/div/div/button[1]")[0].click()
 time.sleep(10)
 A1 = driver.find_elements_by_name("username")[0].send_keys('yoschigamer57@gmail.com')
-A1 = driver.find_elements_by_name("password")[0].send_keys('kiki57660')
+A1 = driver.find_elements_by_name("password")[0].send_keys('MDP')
 
 A1 = driver.find_elements_by_xpath('//*[@id="loginForm"]/div/div[3]/button/div')[0].click()
 time.sleep(10)
